@@ -4,597 +4,234 @@ import lohenTextLogo from '../assets/lohen_text.svg';
 import lohenLogo from '../assets/lohen_cross.svg';
 
 import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components';
+
+import eclipseLogo from '../assets/supporters/eclipse.svg';
+import jetbrainsLogo from '../assets/supporters/jetbrains.svg';
+import pifLogo from '../assets/supporters/PublicInvestmentFund.svg';
 ---
 
 <Layout>
-	<section class="p-6 bg-green-400 rounded-b-[30px] md:rounded-b-[80px] relative flex flex-col">
-		<div class="full-width relative -m-6">
-			<nav class="relative z-30 mx-auto flex w-full max-w-screen-2xl flex-wrap items-center justify-between p-6 bg-green-400">
-				<a class="text-black" href="/">
-					<!--<img class="h-6 md:h-8" src="https://www.summer.io/_app/immutable/assets/logo.Df-S5yqT.svg" /> -->
-					<Image src={lohenTextLogo} alt="Lohen text logo" class="h-6 md:h-8" />
-				</a>
-				<div class="hidden gap-8 sm:flex">
-					<a href="/pricing">Pricing</a>
-					<a href="/jobs">Careers</a>
-				</div>
-				<div class="hidden gap-4 sm:flex">
-					<a href="https://play.summer.io/login">
-						<button class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform z-0 relative flex whitespace-nowrap items-center capitalize leading-5 tracking-tight h-10 group transform-gpu">
-							<div class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-green-200 text-foreground button-start z-10 inline-flex h-full w-[25px]">
-							</div>
-							<div class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-green-200 text-foreground relative z-20 inline-flex h-full flex-1 items-center justify-center">
-								<div class="w-full group-hover:scale-[1.1] will-change-transform bg-green-200 text-foreground transform-gpu z-[-1] group-hover:translate-y-full absolute transition-transform ease-in-out duration-500 -translate-x-1/2 left-1/2 bottom-0 drip h-10 drip3">
-								</div> 
-								Login
-							</div>
-							<div class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-green-200 text-foreground button-end z-10 inline-flex h-full w-[25px]">
-							</div>
-						</button>
-					</a>
-				</div>
-				<button class="-m-2 rounded-xl p-2 sm:hidden">
-					<svg
-						width="32"
-						height="32"
-						viewBox="0 0 32 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<g clip-path="url(#clip0_444_10604)">
-							<path
-								d="M16.6648 2.66675C16.2974 2.66675 15.9995 2.96522 15.9995 3.33341V4.66675C15.9995 5.03494 16.2974 5.33342 16.6648 5.33342C17.0323 5.33342 17.3301 5.03494 17.3301 4.66675V3.33341C17.3301 2.96522 17.0323 2.66675 16.6648 2.66675Z"
-								fill="#141517" />
-							<path
-								d="M23.6664 5.29244C23.9576 5.51696 24.0121 5.93553 23.788 6.22735C23.5639 6.51916 23.1462 6.57371 22.855 6.34918L21.8004 5.53612C21.5092 5.3116 21.4548 4.89303 21.6788 4.60122C21.9029 4.3094 22.3206 4.25486 22.6118 4.47938L23.6664 5.29244Z"
-								fill="#141517" />
-							<path
-								d="M11.1941 7.08598C11.4798 6.85445 11.8987 6.89882 12.1298 7.1851L12.9665 8.2218C13.1976 8.50808 13.1533 8.92785 12.8676 9.15938C12.5819 9.39092 12.163 9.34654 11.932 9.06027L11.0952 8.02357C10.8641 7.73729 10.9084 7.31752 11.1941 7.08598Z"
-								fill="#141517" 
-							/>
-							<path
-								d="M6.37591 8.08078C6.63573 7.82043 6.63573 7.39832 6.37591 7.13797C6.11609 6.87762 5.69484 6.87762 5.43502 7.13797L4.49414 8.08078C4.23432 8.34113 4.23432 8.76324 4.49414 9.02359C4.75396 9.28394 5.17521 9.28394 5.43502 9.02359L6.37591 8.08078Z"
-								fill="#141517" 
-							/>
-							<path	
-								d="M19.2163 6.83538C18.873 6.70395 18.4885 6.87623 18.3573 7.22016L17.8824 8.46566C17.7512 8.8096 17.9231 9.19495 18.2664 9.32638C18.6096 9.4578 18.9942 9.28553 19.1253 8.94159L19.6003 7.69609C19.7314 7.35216 19.5595 6.9668 19.2163 6.83538Z"	
-								fill="#141517" 
-							/>
-							<path
-								d="M27.6664 8.08078C27.9262 7.82043 27.9262 7.39832 27.6664 7.13797C27.4065 6.87762 26.9853 6.87762 26.7255 7.13797L25.7846 8.08078C25.5248 8.34113 25.5248 8.76324 25.7846 9.02359C26.0444 9.28394 26.4657 9.28394 26.7255 9.02359L27.6664 8.08078Z"
-								fill="#141517" 
-							/>
-							<path
-								d="M9.60601 3.41426C9.78973 3.0954 10.1966 2.98615 10.5148 3.17025L11.6672 3.83691C11.9854 4.02101 12.0944 4.42874 11.9107 4.7476C11.727 5.06646 11.3201 5.17571 11.0019 4.99161L9.84953 4.32495C9.53132 4.14085 9.42229 3.73313 9.60601 3.41426Z"
-								fill="#141517" 
-							/>
-							<path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M29.9717 12H2.02855C-3.29413 12 2.02727 0 15.9995 0C29.9718 0 35.2943 12 29.9717 12ZM2.02855 10.5H29.9717C30.1658 10.5 30.2853 10.4725 30.3498 10.4498C30.4088 10.4291 30.4269 10.411 30.4286 10.4094C30.4304 10.4076 30.443 10.3955 30.4586 10.355C30.4761 10.3093 30.4986 10.2231 30.5025 10.0833C30.5198 9.4598 30.1497 8.30212 29.0554 6.94101C26.9356 4.3042 22.5453 1.5 15.9995 1.5C9.45376 1.5 5.06377 4.30419 2.94422 6.94095C1.85012 8.30203 1.48017 9.45967 1.49752 10.0832C1.5014 10.2229 1.52396 10.3092 1.54146 10.3548C1.55702 10.3954 1.56945 10.4073 1.57128 10.4091C1.57298 10.4108 1.5914 10.4291 1.65038 10.4498C1.71488 10.4725 1.83441 10.5 2.02855 10.5Z"
-								fill="#141517"
-							/>
-							<path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M4.41544 32H27.5828C29.4567 32 31.2837 30.9702 31.7031 29.1401C31.9932 27.8742 31.9306 26.6667 30.6358 26.6667H1.36238C0.0676059 26.6667 0.00501519 27.8742 0.295144 29.1401C0.714576 30.9702 2.54154 32 4.41544 32ZM27.5828 30.5H4.41544C2.98481 30.5 1.96681 29.7325 1.7541 28.8044C1.6971 28.5556 1.66431 28.3412 1.65372 28.1667H30.3445C30.3339 28.3412 30.3011 28.5556 30.2441 28.8044C30.0314 29.7325 29.0134 30.5 27.5828 30.5Z"
-								fill="#141517" 
-							/>
-							<path
-								d="M11.9906 16.2863C9.82406 15.6942 7.53889 15.6942 5.3724 16.2863L1.71321 17.2863C1.00423 17.48 0.272739 17.0612 0.0793804 16.3507C-0.113978 15.6403 0.304017 14.9073 1.013 14.7136L4.67218 13.7136C7.29711 12.9962 10.0658 12.9962 12.6908 13.7136C14.8573 14.3056 17.1424 14.3056 19.3089 13.7136C21.9338 12.9962 24.7026 12.9962 27.3275 13.7136L30.9867 14.7136C31.6957 14.9073 32.1137 15.6403 31.9203 16.3507C31.7269 17.0612 30.9955 17.48 30.2865 17.2863L26.6273 16.2863C24.4608 15.6942 22.1756 15.6942 20.0091 16.2863C17.3842 17.0036 14.6155 17.0036 11.9906 16.2863Z"
-								fill="#141517"></path>
-							<path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M31.9669 22.0001C31.9669 20.1591 30.4775 18.6667 28.6403 18.6667H3.35869C1.5215 18.6667 0.0321609 20.1591 0.0321609 22.0001C0.0321609 23.841 1.5215 25.3334 3.35869 25.3334H28.6403C30.4775 25.3334 31.9669 23.841 31.9669 22.0001ZM25.0181 20.0001L20.1686 23.9759C20.1586 23.9842 20.1485 23.9922 20.1383 24.0001C20.0862 24.0404 20.0318 24.0763 19.9756 24.1078C19.5166 24.3654 18.94 24.3294 18.5138 24.0001C18.5036 23.9922 18.4935 23.9842 18.4834 23.9759L13.634 20.0001H25.0181Z"
-								fill="#141517"
-							/>
-						</g>
-						<defs>
-							<clipPath id="clip0_444_10604">
-								<rect width="32" height="32" fill="white" />
-							</clipPath>
-						</defs>
-					</svg>
-				</button>
-			</nav>
-			<button class="hidden"></button>
-		</div>
-		<div class="relative mx-auto w-full xl:max-w-screen-2xl">
-			<div class="my-4 flex flex-wrap items-start justify-between sm:my-16 sm:flex-nowrap">
-				<div class="mt-6 w-full p-6 md:pr-0 sm:mx-0 sm:mb-24 sm:mt-12 sm:max-w-[80%] lg:mx-12 lg:mr-0">
-					<h1 class="font-ohno text-center text-5xl sm:text-left sm:text-6xl lg:text-[80px]">
-						A performant, affordable 
-						<br class="hidden md:block" /> 
-						data stack? Yes, please!
-					</h1>
-					<div class="mb-12 mt-6 flex flex-col items-center gap-4 sm:mb-0 sm:items-start md:mt-10 md:flex-row md:gap-8 lg:gap-12">
-						<div class="flex-1 text-center text-lg text-green-800 sm:text-left sm:text-xl md:flex-none md:text-2xl lg:text-3xl">
-							We're on a mission to
-							<br class="hidden md:block" /> 
-							make data a pleasure.
-						</div>
-							<button
-								type="button"
-								aria-haspopup="dialog"
-								aria-expanded="false"
-								data-melt-dialog-trigger=""
-								data-alert-dialog-trigger=""
-								class="w-full sm:w-auto"
-								><button
-									class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform z-0 relative whitespace-nowrap items-center capitalize tracking-tight h-20 text-2xl group transform-gpu hidden lg:flex svelte-1yocqo"
-									><div
-										class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-start z-10 inline-flex h-full w-[50px] svelte-1yocqo"
-									>
-									</div>
-									<div
-										class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white relative z-20 inline-flex h-full flex-1 items-center justify-center svelte-1yocqo"
-									>
-										<div
-											class="w-full group-hover:scale-[1.1] will-change-transform bg-black text-white transform-gpu z-[-1] group-hover:translate-y-full absolute transition-transform ease-in-out duration-500 -translate-x-1/2 left-1/2 bottom-0 drip h-20 drip4 svelte-1yocqo"
-										>
-										</div> Join Us!
-									</div>
-									<div
-										class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-end z-10 inline-flex h-full w-[50px] svelte-1yocqo"
-									>
-									</div></button
-								></button
-							>
-							<button
-								type="button"
-								aria-haspopup="dialog"
-								aria-expanded="false"
-								data-melt-dialog-trigger=""
-								data-alert-dialog-trigger=""
-								class="w-full sm:w-auto"
-								><button
-									class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform z-0 relative flex whitespace-nowrap items-center capitalize tracking-tight h-14 text-xl group transform-gpu w-full sm:w-auto lg:hidden svelte-1yocqo"
-									><div
-										class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-start z-10 inline-flex h-full w-[35px] svelte-1yocqo"
-									>
-									</div>
-									<div
-										class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white relative z-20 inline-flex h-full flex-1 items-center justify-center svelte-1yocqo"
-									>
-										<div
-											class="w-full group-hover:scale-[1.1] will-change-transform bg-black text-white transform-gpu z-[-1] group-hover:translate-y-full absolute transition-transform ease-in-out duration-500 -translate-x-1/2 left-1/2 bottom-0 drip h-10 drip5 svelte-1yocqo"
-										>
-										</div> Join Us!
-									</div>
-									<div
-										class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-end z-10 inline-flex h-full w-[35px] svelte-1yocqo"
-									>
-									</div></button
-								></button
-							>
-						</div>
-					</div>
-					<img
-						src="https://www.summer.io/images/landing/header-assets.png"
-						class="mt-[10%] hidden w-full max-w-[300px] sm:block lg:max-w-[420px] lg:mt-0 xl:max-w-[480px]"
-						alt="Mockups of different data views within Summer"
-					/>
-				</div>
-				<img
-					src="https://www.summer.io/images/landing/sunni-lemonade.png"
-					class="absolute -bottom-24 right-12 z-[5] w-36 sm:right-32 sm:w-48 md:right-64 2xl:right-[20%]"
-					alt="Sunni, the Summer mascot, sipping lemonade"
-				/>
-				<img
-					src="https://www.summer.io/images/landing/landing-drips.svg"
-					class="absolute left-8 top-[100%] z-[1] mt-6 w-64 sm:left-24 lg:w-[400px] xl:w-[600px]"
-					alt="Decorative drips"
-				/>
-			</div>
-			<div
-				class="drip rounded-none pointer-events-none absolute left-0 right-0 top-full bottom-0 z-20 -m-[2px] w-full drip2 svelte-1p0z7cy"
-			>
-			</div>
-		</section>
-		<section
-			class="p-6 bg-background [&>*]:bg-background rounded-none relative flex flex-col items-center justify-center gap-8 pb-12 text-center pt-36 lg:pt-52 svelte-1p0z7cy"
-		>
-			<div
-				class="font-ohno mx-6 !bg-transparent text-5xl md:mx-24 md:text-7xl z-10 relative kite"
-			>
-				<div slot="title" data-svelte-h="svelte-qbieju">
-					From zero to data driven
-				</div>
-			</div>
-			<div class="relative max-w-[680px] !bg-transparent text-2xl">
-				<div class="text-foreground-subtle text-[18px] sm:text-[24px]">
-					<p
-						class="max-w-[580px]"
-						slot="body"
-						data-svelte-h="svelte-hw2wze"
-					>
-						Summer makes it a breeze to bring the power of data to
-						your company.
-					</p>
-				</div>
-			</div>
-		</section>
-		<div
-			class="mx-auto grid max-w-screen-2xl gap-4 p-8 pt-0 sm:gap-x-8 sm:gap-y-12 md:grid-cols-2 2xl:p-0"
-		>
-			<div
-				class="flex-col border border-pink-800 text-pink-900 rounded-3xl pink card my-8 sm:my-12 flex items-start justify-center p-8 sm:p-10 sm:mx-8 -rotate-2 svelte-12hpcso"
-			>
-				<div
-					class="color-foreground mb-2 flex font-medium items-center gap-2.5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
-				>
-					<img
-						src="https://www.summer.io/images/landing/icon-ingest.png"
-						alt="Icon for connectors"
-						class="w-12 sm:w-16"
-					/>
-					Your Data, Delivered
-				</div>
-				<p class="text-md sm:text-xl lg:text-2xl">
-					Importing your data into Summer will be smooth sailing,
-					thanks to our built in ETL tooling. We have dozens of
-					connectors to choose from, with more on the way.
-				</p>
-			</div>
-			<img
-				src="https://www.summer.io/images/landing/featured-image1.png"
-				alt="Series of logos, showcasing the set of connectors possible with Summer"
-				class="m-auto"
-			/>
-			<div
-				class="flex-col border border-blue-800 text-blue-900 rounded-3xl blue card my-8 sm:my-12 flex items-start justify-center p-8 sm:p-10 sm:mx-8 rotate-2 svelte-12hpcso"
-			>
-				<div
-					class="color-foreground mb-2 flex font-medium items-center gap-2.5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
-				>
-					<img
-						src="https://www.summer.io/images/landing/icon-warehouse.png"
-						alt="Icon for queries"
-						class="w-12 sm:w-16"
-					/>
-					Query Away
-				</div>
-				<p class="text-md sm:text-xl lg:text-2xl">
-					We've designed and built a data warehouse from the ground up
-					to deliver the best performance and pricing out there.
-				</p>
-			</div>
-			<img
-				src="https://www.summer.io/images/landing/featured-image2.png"
-				alt="An example SQL query in the Summer editor"
-				class="m-auto"
-			/>
-			<div
-				class="flex-col border border-orange-800 text-orange-900 rounded-3xl orange card my-8 sm:my-12 flex items-start justify-center p-8 sm:p-10 sm:mx-8 -rotate-2 svelte-12hpcso"
-			>
-				<div
-					class="color-foreground mb-2 flex font-medium items-center gap-2.5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
-				>
-					<img
-						src="https://www.summer.io/images/landing/icon-analytics.png"
-						alt="Icon for dashboards"
-						class="w-12 sm:w-16"
-					/>
-					Bring Data to Life
-				</div>
-				<p class="text-md sm:text-xl lg:text-2xl">
-					Powerful visualization and dashboarding tools are included
-					to turn your data into insights. As gorgeous as they are
-					smart, it's the complete package.
-				</p>
-			</div>
-			<img
-				src="https://www.summer.io/images/landing/featured-image3.png"
-				alt="A dashboard showcasing the visuals you can create in Summer"
-				class="m-auto"
-			/>
-		</div>
-		<div class="relative mt-28"></div>
-		<!--<div class="relative mt-24">
-			<div
-				class="absolute -top-[4rem] z-0 flex w-full justify-center sm:-top-[5.75rem]"
-				data-svelte-h="svelte-1w82u45"
-			>
-				<img
-					src="https://www.summer.io/images/sunni.svg"
-					class="animate-sunni w-36 sm:w-48 svelte-d36489"
-					alt="Sunni, the Summer mascot"
-				/>
-			</div>
-			<section
-				class="p-6 bg-yellow-400 rounded-none relative flex flex-col items-center justify-center gap-8 pb-36 pt-12 md:py-24 md:pb-48 svelte-1p0z7cy"
-			>
-				<!--<img
-							src="https://www.summer.io/images/details/yellow-swoop.svg"
-							class="yellow-swoop absolute svelte-d36489"
-							alt="Decorative shape"
-						/> -->
-		<!--		<section
-					class="[&>*]:bg-background rounded-none relative flex flex-col items-center justify-center gap-8 text-center bg-transparent p-0 svelte-1p0z7cy"
-				>
-					<div
-						class="font-ohno mx-6 !bg-transparent text-5xl md:mx-24 md:text-7xl z-10 relative sparkle yellow"
-					>
-						<div slot="title" data-svelte-h="svelte-ulh4bh">
-							We Make Data A Pleasure
-						</div>
-					</div>
-					<div
-						class="relative max-w-[680px] !bg-transparent text-2xl"
-					>
-						<div class="text-[18px] sm:text-[24px] text-yellow-800">
-							<p slot="body" data-svelte-h="svelte-1a5575q">
-								We've designed Summer to be as friendly as it is
-								capable. Here's a few product features we're
-								especially proud of.
-							</p>
-						</div>
-					</div>
-				</section>
-				<div
-					class="grid max-w-screen-2xl gap-6 md:grid-cols-2 lg:grid-cols-3"
-				>
-					<div
-						class="flex flex-col border border-yellow-800 bg-background rounded-3xl yellow-light md:col-span-2 items-start p-0 overflow-hidden svelte-12hpcso"
-					>
-						<div
-							class="color-foreground text-2xl md:text-[32px] p-6 sm:p-10 pb-2 sm:pb-2 svelte-d36489"
-						>
-							One access control for everything
-						</div>
-						<p
-							class="color-foreground-sublte text-md md:text-[17px] px-6 py-2 sm:px-10 flex-1 svelte-d36489"
-						>
-							Summer lets you control data access across your
-							ingest pipelines, warehouse tables, and dashboards
-							from a single place. We make it easy to make sure
-							the right people see the right things, and no one
-							else does.
-						</p>
-						<img
-							src="https://www.summer.io/images/details/details-image1.svg"
-							class="w-full"
-							alt="Cartoon office scene with coworkers sharing data"
-						/>
-					</div>
-					<div
-						class="flex flex-col border border-yellow-800 bg-background rounded-3xl yellow-light items-start p-0 overflow-hidden svelte-12hpcso"
-					>
-						<div
-							class="color-foreground text-2xl md:text-[32px] p-6 sm:p-10 pb-2 sm:pb-2 svelte-d36489"
-						>
-							Sharing made easy
-						</div>
-						<p
-							class="color-foreground-sublte text-md md:text-[17px] px-6 py-2 sm:px-10 flex-1 svelte-d36489"
-						>
-							Easily share queries, dashboards, tables, or even
-							entire datasets with your teammates or external
-							organizations.
-						</p>
-						<img
-							src="https://www.summer.io/images/details/details-image2.png"
-							class="w-full"
-							alt="Mockup of a sharing modal between organizations"
-						/>
-					</div>
-					<div
-						class="flex flex-col border border-yellow-800 bg-background rounded-3xl yellow-light items-start p-0 overflow-hidden svelte-12hpcso"
-					>
-						<div
-							class="color-foreground text-2xl md:text-[32px] p-6 sm:p-10 pb-2 sm:pb-2 svelte-d36489"
-						>
-							Pricing for humans
-						</div>
-						<p
-							class="color-foreground-sublte text-md md:text-[17px] px-6 py-2 sm:px-10 flex-1 svelte-d36489"
-						>
-							Fair, transparent, easy to understand pricing. No
-							dark patterns here. See our
-							<a
-								href="/pricing"
-								class="text-accent-primary underline"
-								data-svelte-h="svelte-n0t3xi">pricing page</a
-							> for proof!
-						</p>
-						<img
-							src="https://www.summer.io/images/details/details-image3.png"
-							class="w-full"
-							alt="Example pricing for a dataset"
-						/>
-					</div>
-					<div
-						class="flex flex-col border border-yellow-800 bg-background rounded-3xl yellow-light items-start p-0 overflow-hidden svelte-12hpcso"
-					>
-						<div
-							class="color-foreground text-2xl md:text-[32px] p-6 sm:p-10 pb-2 sm:pb-2 svelte-d36489"
-						>
-							No chance for errors
-						</div>
-						<p
-							class="color-foreground-sublte text-md md:text-[17px] px-6 py-2 sm:px-10 flex-1 svelte-d36489"
-						>
-							Our SQL editor eliminates errors and supports you at
-							every step, so you can query with confidence.
-						</p>
-						<img
-							src="https://www.summer.io/images/details/details-image4.png"
-							class="w-full"
-							alt="Example query with error handling"
-						/>
-					</div>
-					<div
-						class="flex flex-col border border-yellow-800 bg-background rounded-3xl yellow-light items-start p-0 overflow-hidden svelte-12hpcso"
-					>
-						<div
-							class="color-foreground text-2xl md:text-[32px] p-6 sm:p-10 pb-2 sm:pb-2 svelte-d36489"
-						>
-							AI, but different
-						</div>
-						<p
-							class="color-foreground-sublte text-md md:text-[17px] px-6 py-2 sm:px-10 flex-1 mb-4 svelte-d36489"
-						>
-							Natural language to SQL and charts is table stakes.
-							We're cooking up something only Summer can
-							deliver—stay tuned!
-						</p>
-						<img
-							src="https://www.summer.io/images/details/details-image5.svg"
-							class="w-full"
-							alt="Cartoon of the Summer mascot enjoying a cookout"
-						/>
-					</div>
-				</div>
-				<div
-					class="flex items-center border border-yellow-600 text-yellow-800 p-6 rounded-3xl yellow mt-12 flex-row flex-wrap gap-8 svelte-12hpcso"
-				>
-					<div
-						class="text-xl md:text-2xl"
-						data-svelte-h="svelte-to9bvg"
-					>
-						Water's warm, hop in.
-					</div>
-					<button
-						type="button"
-						aria-haspopup="dialog"
-						aria-expanded="false"
-						data-melt-dialog-trigger=""
-						data-alert-dialog-trigger=""
-						class="w-full sm:w-auto"
-						><button
-							class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform z-0 relative flex whitespace-nowrap items-center capitalize tracking-tight h-14 text-xl group transform-gpu svelte-1yocqo"
-							><div
-								class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-start z-10 inline-flex h-full w-[35px] svelte-1yocqo"
-							>
-							</div>
-							<div
-								class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white relative z-20 inline-flex h-full flex-1 items-center justify-center svelte-1yocqo"
-							>
-								<div
-									class="w-full group-hover:scale-[1.1] will-change-transform bg-black text-white transform-gpu z-[-1] group-hover:translate-y-full absolute transition-transform ease-in-out duration-500 -translate-x-1/2 left-1/2 bottom-0 drip h-10 drip1 svelte-1yocqo"
-								>
-								</div> Join Us!
-							</div>
-							<div
-								class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-end z-10 inline-flex h-full w-[35px] svelte-1yocqo"
-							>
-							</div></button
-						></button
-					>
-				</div>
-				<div
-					class="drip rounded-none pointer-events-none absolute left-0 right-0 top-full bottom-0 z-20 -m-[2px] w-full drip1 svelte-1p0z7cy"
-				>
-				</div>
-			</section>
-		</div> -->
-		<section class="flex flex-col p-6 relative bg-blue-400 rounded-t-[30px] md:rounded-t-[80px] -mt-16 items-center py-12">
-			<footer class="flex w-full max-w-screen-2xl flex-col px-4 sm:px-10 md:px-20 2xl:px-0">
-				<div class="grid gap-10 pb-10 sm:grid-cols-2 sm:py-10">
-					<div class="flex flex-col justify-end gap-4 md:text-lg">
-						<a href="/">Home</a>
-						<div class="flex flex-col gap-4">
-							<a href="/pricing">Pricing</a>
-							<a href="/jobs">Careers</a>
-						</div>
-						<button
-							type="button"
-							aria-haspopup="dialog"
-							aria-expanded="false"
-							data-melt-dialog-trigger=""
-							data-alert-dialog-trigger=""
-							class="w-full sm:w-auto"
-							><button
-								class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform z-0 relative flex whitespace-nowrap items-center capitalize tracking-tight h-14 text-xl group transform-gpu svelte-1yocqo"
-								><div
-									class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-start z-10 inline-flex h-full w-[35px] svelte-1yocqo"
-								>
-								</div>
-								<div
-									class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white relative z-20 inline-flex h-full flex-1 items-center justify-center svelte-1yocqo"
-								>
-									<div
-										class="w-full group-hover:scale-[1.1] will-change-transform bg-black text-white transform-gpu z-[-1] group-hover:translate-y-full absolute transition-transform ease-in-out duration-500 -translate-x-1/2 left-1/2 bottom-0 drip h-10 drip4 svelte-1yocqo"
-									>
-									</div> Join Us!
-								</div>
-								<div
-									class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-black text-white button-end z-10 inline-flex h-full w-[35px] svelte-1yocqo"
-								>
-								</div></button
-							></button
-						>
-					</div>
-					<div class="flex flex-col justify-center text-center">
-						<!--<svg
-							viewBox="0 0 971 480"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							><path
-								d="M317.576 28.6481C298.272 28.2077 286.383 37.5095 285.93 57.4911C284.712 111.161 287.702 131.37 287.041 160.549C286.848 169.034 286.157 179.912 273.998 179.634C261.838 179.357 261.642 168.459 261.834 159.973C262.496 130.795 266.399 110.743 267.617 57.0733C268.07 37.0917 255.714 27.2368 235.581 26.7775C207.55 26.138 194.283 38.1095 192.498 116.834C190.712 195.559 217.056 239.899 272.617 241.167C328.177 242.434 356.505 199.342 358.291 120.617C360.077 41.892 349.261 29.371 317.605 28.6488L317.576 28.6481Z"
-								fill="currentColor"></path><path
-								d="M170.047 155.348C139.503 132.559 95.2737 129.557 70.8349 162.497C38.1381 206.567 99.2472 259.874 87.0145 276.362C84.2147 280.135 80.8294 281.715 73.8255 276.49C58.9036 265.356 66.3534 243.284 51.1765 232.792C41.9161 226.382 13.7809 230.672 6.22054 240.862C-5.94142 257.255 -2.06975 293.027 34.0538 319.979C70.1774 346.931 109.605 352.676 137.506 315.07C174.654 264.999 110.922 216.745 123.384 199.948C125.742 196.769 131.373 195.643 136.347 199.355C149.12 208.885 143.994 217.359 158.793 235.022C165.664 243.237 186.704 243.215 202.061 229.65C218.261 215.346 205.17 181.536 170.056 155.337L170.047 155.348Z"
-								fill="currentColor"></path><path
-								d="M835.668 191.432C817.475 195.01 809.349 200.569 786.96 204.972C770.974 208.115 768.196 201.237 767.564 198.005C766.46 192.355 770.655 188.521 782.576 186.177C814.476 179.904 839.941 183.364 832.931 147.516C825.921 111.667 799.597 126.249 777.062 130.68C760.901 133.858 754.789 132.671 753.194 124.517C751.6 116.363 756.167 114.043 772.647 110.803C789.969 107.396 796.219 108.36 813.106 105.039C829.992 101.719 838.809 92.213 834.905 72.2503C830.68 50.6422 825.117 39.927 772.308 50.3115C708.392 62.8802 691.132 71.5364 710.128 168.685C729.125 265.834 737.495 274.712 796.387 263.132C865.356 249.569 870.035 233.786 866.072 213.517C862.109 193.249 851.576 188.273 835.663 191.403L835.668 191.432Z"
-								fill="currentColor"></path><path
-								d="M512.286 4.00178C460.318 26.0259 497.545 88.1018 475.425 97.4763C453.291 106.857 434.845 36.8213 382.89 58.8396C348.558 73.3894 352.203 127.017 378.283 188.904C410.527 265.415 418.352 275.598 454.823 260.141C474.722 251.708 474.825 233.655 469.727 221.559C455.892 188.73 446.952 180.018 441.63 167.389C439.136 161.471 439.805 156.693 444.984 154.499C465.21 145.927 480.826 217.403 519.124 201.173L519.084 201.077L519.152 201.161C557.45 184.93 517.219 123.885 537.445 115.314C542.624 113.119 546.507 115.968 549.001 121.886C554.323 134.515 554.322 147.015 568.157 179.845C573.255 191.941 586.236 204.449 606.135 196.016C642.606 180.559 640.778 167.835 608.535 91.3232C582.46 29.4499 546.645 -10.5596 512.313 3.99024L512.286 4.00178Z"
-								fill="currentColor"></path><path
-								d="M713.25 234.004C659.134 218.009 648.696 289.686 625.661 282.878C602.612 276.066 632.608 210.169 578.505 194.179C542.754 183.612 511.68 227.409 492.739 291.855C469.323 371.529 468.94 384.379 506.919 395.605C527.641 401.729 539.13 387.83 542.831 375.234C552.879 341.047 551.47 328.627 555.335 315.476C557.146 309.313 560.683 306.043 566.077 307.637C587.139 313.862 554.044 379.074 593.925 390.862L593.954 390.762L593.953 390.87C633.835 402.657 641.298 329.869 662.36 336.094C667.753 337.688 668.956 342.36 667.145 348.523C663.28 361.674 655.379 371.342 645.331 405.529C641.629 418.125 643.765 436.051 664.486 442.175C702.466 453.401 709.094 442.397 732.51 362.722C751.447 298.29 749.03 244.579 713.279 234.012L713.25 234.004Z"
-								fill="currentColor"></path><path
-								d="M910.004 389.409C918.322 376.351 937.957 391.831 959.898 357.389C981.839 322.948 972.813 290.815 918.829 256.231C881.039 232.021 854.716 220.395 804.822 298.715C754.928 377.036 747.057 399.099 775.053 417.034C803.049 434.97 815.501 408.723 823.891 395.553C832.281 382.383 838.652 363.226 849.535 369.197C859.405 374.606 855.337 383.777 851.074 399.046C844.165 423.817 839.304 458.197 865.142 474.75C883.407 486.451 896.261 476.616 903.998 464.469C916.81 444.358 902.449 401.268 910.012 389.396L910.004 389.409ZM875.833 336.299C859.516 325.511 864.994 317.436 870.99 308.024C876.986 298.611 881.912 289.831 897.207 299.631C908.972 307.168 915.079 318.375 908.184 329.198C901.289 340.021 892.15 347.086 875.846 336.307L875.833 336.299Z"
-								fill="currentColor"></path></svg
-						> -->
-						<Image src={lohenTextLogo} alt="Lohen logo" class="w-2xl" />
-					</div>
-				</div>
-				<div class="flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-blue-500 px-8 py-4">
-					<div class="flex flex-1 gap-3">
-						<a href="">
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-								><g clip-path="url(#clip0_40_304)"
-									><path
-										d="M19 0.999878H5C3.6744 1.00147 2.40356 1.52876 1.46622 2.4661C0.528882 3.40344 0.00158786 4.67428 0 5.99988L0 17.9999C0.00158786 19.3255 0.528882 20.5963 1.46622 21.5337C2.40356 22.471 3.6744 22.9983 5 22.9999H19C20.3256 22.9983 21.5964 22.471 22.5338 21.5337C23.4711 20.5963 23.9984 19.3255 24 17.9999V5.99988C23.9984 4.67428 23.4711 3.40344 22.5338 2.4661C21.5964 1.52876 20.3256 1.00147 19 0.999878V0.999878ZM5 2.99988H19C19.5988 3.00106 20.1835 3.18139 20.679 3.51768C21.1744 3.85397 21.5579 4.33082 21.78 4.88688L14.122 12.5459C13.5584 13.1072 12.7954 13.4223 12 13.4223C11.2046 13.4223 10.4416 13.1072 9.878 12.5459L2.22 4.88688C2.44215 4.33082 2.82561 3.85397 3.32105 3.51768C3.81648 3.18139 4.40121 3.00106 5 2.99988V2.99988ZM19 20.9999H5C4.20435 20.9999 3.44129 20.6838 2.87868 20.1212C2.31607 19.5586 2 18.7955 2 17.9999V7.49988L8.464 13.9599C9.40263 14.8961 10.6743 15.4219 12 15.4219C13.3257 15.4219 14.5974 14.8961 15.536 13.9599L22 7.49988V17.9999C22 18.7955 21.6839 19.5586 21.1213 20.1212C20.5587 20.6838 19.7956 20.9999 19 20.9999Z"
-										fill="#141517"></path></g
-								><defs
-									><clipPath id="clip0_40_304"
-										><rect
-											width="24"
-											height="24"
-											fill="white"></rect></clipPath
-									></defs
-								></svg>
-						</a>
-						<!--
-						<a
-							href="#"
-							><svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-								><g clip-path="url(#clip0_449_10747)"
-									><path
-										d="M22.1538 0H1.84615C1.35652 0 0.886947 0.194505 0.540726 0.540726C0.194505 0.886947 0 1.35652 0 1.84615V22.1538C0 22.6435 0.194505 23.1131 0.540726 23.4593C0.886947 23.8055 1.35652 24 1.84615 24H22.1538C22.6435 24 23.1131 23.8055 23.4593 23.4593C23.8055 23.1131 24 22.6435 24 22.1538V1.84615C24 1.35652 23.8055 0.886947 23.4593 0.540726C23.1131 0.194505 22.6435 0 22.1538 0ZM22.1538 22.1538H1.84615V1.84615H22.1538V22.1538ZM8.30769 10.1538V17.5385C8.30769 17.7833 8.21044 18.0181 8.03733 18.1912C7.86422 18.3643 7.62943 18.4615 7.38462 18.4615C7.1398 18.4615 6.90501 18.3643 6.7319 18.1912C6.55879 18.0181 6.46154 17.7833 6.46154 17.5385V10.1538C6.46154 9.90903 6.55879 9.67424 6.7319 9.50113C6.90501 9.32802 7.1398 9.23077 7.38462 9.23077C7.62943 9.23077 7.86422 9.32802 8.03733 9.50113C8.21044 9.67424 8.30769 9.90903 8.30769 10.1538ZM18.4615 13.3846V17.5385C18.4615 17.7833 18.3643 18.0181 18.1912 18.1912C18.0181 18.3643 17.7833 18.4615 17.5385 18.4615C17.2936 18.4615 17.0589 18.3643 16.8857 18.1912C16.7126 18.0181 16.6154 17.7833 16.6154 17.5385V13.3846C16.6154 12.7726 16.3723 12.1856 15.9395 11.7528C15.5067 11.3201 14.9197 11.0769 14.3077 11.0769C13.6957 11.0769 13.1087 11.3201 12.6759 11.7528C12.2431 12.1856 12 12.7726 12 13.3846V17.5385C12 17.7833 11.9027 18.0181 11.7296 18.1912C11.5565 18.3643 11.3217 18.4615 11.0769 18.4615C10.8321 18.4615 10.5973 18.3643 10.4242 18.1912C10.2511 18.0181 10.1538 17.7833 10.1538 17.5385V10.1538C10.155 9.92774 10.2391 9.70993 10.3902 9.54171C10.5413 9.3735 10.7488 9.26658 10.9735 9.24125C11.1982 9.21593 11.4244 9.27394 11.6091 9.4043C11.7938 9.53466 11.9243 9.72829 11.9758 9.94846C12.6002 9.52485 13.3283 9.27934 14.0817 9.23829C14.8352 9.19724 15.5856 9.3622 16.2523 9.71545C16.9191 10.0687 17.4771 10.5969 17.8663 11.2434C18.2555 11.8898 18.4613 12.63 18.4615 13.3846ZM8.76923 6.92308C8.76923 7.19693 8.68802 7.46463 8.53588 7.69233C8.38374 7.92003 8.16749 8.0975 7.91448 8.20229C7.66148 8.30709 7.38308 8.33451 7.11449 8.28109C6.8459 8.22766 6.59919 8.09579 6.40554 7.90215C6.2119 7.70851 6.08003 7.46179 6.0266 7.1932C5.97318 6.92461 6.0006 6.64621 6.1054 6.39321C6.2102 6.1402 6.38767 5.92395 6.61536 5.77181C6.84306 5.61967 7.11076 5.53846 7.38462 5.53846C7.75184 5.53846 8.10402 5.68434 8.36369 5.94401C8.62335 6.20367 8.76923 6.55585 8.76923 6.92308Z"
-										fill="#141517"></path></g
-								><defs
-									><clipPath id="clip0_449_10747"
-										><rect
-											width="24"
-											height="24"
-											fill="white"></rect></clipPath
-									></defs
-								></svg
-							></a>
-							 -->
-					</div>
-					<p class="text-end leading-tight text-blue-800">© 2025 Lohen AI Co.</p>
-				</div>
-			</footer>
-		</section>
+    <section class="p-6 bg-green-400 rounded-b-[30px] md:rounded-b-[80px] relative flex flex-col">
+        <div class="full-width relative -m-6">
+            <nav class="relative z-30 mx-auto flex w-full max-w-screen-2xl flex-wrap items-center justify-between p-6 bg-green-400">
+                <a class="text-black" href="/">
+                    <!--<img class="h-6 md:h-8" src="https://www.summer.io/_app/immutable/assets/logo.Df-S5yqT.svg" /> -->
+                    <Image src={lohenTextLogo} alt="Lohen text logo" class="h-6 md:h-8" />
+                </a>
+                <div class="hidden gap-8 sm:flex">
+                    <a href="/">Pricing</a>
+                    <a href="/">Careers</a>
+                </div>
+                <div class="hidden gap-4 sm:flex">
+                    <a href="/">
+                        <button class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform z-0 relative flex whitespace-nowrap items-center capitalize leading-5 tracking-tight h-10 group transform-gpu">
+                            <div class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-green-200 text-foreground button-start z-10 inline-flex h-full w-[25px]">
+                            </div>
+                            <div class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-green-200 text-foreground relative z-20 inline-flex h-full flex-1 items-center justify-center">
+                                <div class="w-full group-hover:scale-[1.1] will-change-transform bg-green-200 text-foreground transform-gpu z-[-1] group-hover:translate-y-full absolute transition-transform ease-in-out duration-500 -translate-x-1/2 left-1/2 bottom-0 drip h-10 drip3">
+                                </div> 
+                                Login
+                            </div>
+                            <div class="group-hover:scale-[1.1] transition-all duration-500 ease-in-out will-change-transform bg-green-200 text-foreground button-end z-10 inline-flex h-full w-[25px]">
+                            </div>
+                        </button>
+                    </a>
+                </div>
+                <button class="-m-2 rounded-xl p-2 sm:hidden">
+                    <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_444_10604)">
+                            <path
+                                d="M16.6648 2.66675C16.2974 2.66675 15.9995 2.96522 15.9995 3.33341V4.66675C15.9995 5.03494 16.2974 5.33342 16.6648 5.33342C17.0323 5.33342 17.3301 5.03494 17.3301 4.66675V3.33341C17.3301 2.96522 17.0323 2.66675 16.6648 2.66675Z"
+                                fill="#141517" />
+                            <path
+                                d="M23.6664 5.29244C23.9576 5.51696 24.0121 5.93553 23.788 6.22735C23.5639 6.51916 23.1462 6.57371 22.855 6.34918L21.8004 5.53612C21.5092 5.3116 21.4548 4.89303 21.6788 4.60122C21.9029 4.3094 22.3206 4.25486 22.6118 4.47938L23.6664 5.29244Z"
+                                fill="#141517" />
+                            <path
+                                d="M11.1941 7.08598C11.4798 6.85445 11.8987 6.89882 12.1298 7.1851L12.9665 8.2218C13.1976 8.50808 13.1533 8.92785 12.8676 9.15938C12.5819 9.39092 12.163 9.34654 11.932 9.06027L11.0952 8.02357C10.8641 7.73729 10.9084 7.31752 11.1941 7.08598Z"
+                                fill="#141517" 
+                            />
+                            <path
+                                d="M6.37591 8.08078C6.63573 7.82043 6.63573 7.39832 6.37591 7.13797C6.11609 6.87762 5.69484 6.87762 5.43502 7.13797L4.49414 8.08078C4.23432 8.34113 4.23432 8.76324 4.49414 9.02359C4.75396 9.28394 5.17521 9.28394 5.43502 9.02359L6.37591 8.08078Z"
+                                fill="#141517" 
+                            />
+                            <path	
+                                d="M19.2163 6.83538C18.873 6.70395 18.4885 6.87623 18.3573 7.22016L17.8824 8.46566C17.7512 8.8096 17.9231 9.19495 18.2664 9.32638C18.6096 9.4578 18.9942 9.28553 19.1253 8.94159L19.6003 7.69609C19.7314 7.35216 19.5595 6.9668 19.2163 6.83538Z"	
+                                fill="#141517" 
+                            />
+                            <path
+                                d="M27.6664 8.08078C27.9262 7.82043 27.9262 7.39832 27.6664 7.13797C27.4065 6.87762 26.9853 6.87762 26.7255 7.13797L25.7846 8.08078C25.5248 8.34113 25.5248 8.76324 25.7846 9.02359C26.0444 9.28394 26.4657 9.28394 26.7255 9.02359L27.6664 8.08078Z"
+                                fill="#141517" 
+                            />
+                            <path
+                                d="M9.60601 3.41426C9.78973 3.0954 10.1966 2.98615 10.5148 3.17025L11.6672 3.83691C11.9854 4.02101 12.0944 4.42874 11.9107 4.7476C11.727 5.06646 11.3201 5.17571 11.0019 4.99161L9.84953 4.32495C9.53132 4.14085 9.42229 3.73313 9.60601 3.41426Z"
+                                fill="#141517" 
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M29.9717 12H2.02855C-3.29413 12 2.02727 0 15.9995 0C29.9718 0 35.2943 12 29.9717 12ZM2.02855 10.5H29.9717C30.1658 10.5 30.2853 10.4725 30.3498 10.4498C30.4088 10.4291 30.4269 10.411 30.4286 10.4094C30.4304 10.4076 30.443 10.3955 30.4586 10.355C30.4761 10.3093 30.4986 10.2231 30.5025 10.0833C30.5198 9.4598 30.1497 8.30212 29.0554 6.94101C26.9356 4.3042 22.5453 1.5 15.9995 1.5C9.45376 1.5 5.06377 4.30419 2.94422 6.94095C1.85012 8.30203 1.48017 9.45967 1.49752 10.0832C1.5014 10.2229 1.52396 10.3092 1.54146 10.3548C1.55702 10.3954 1.56945 10.4073 1.57128 10.4091C1.57298 10.4108 1.5914 10.4291 1.65038 10.4498C1.71488 10.4725 1.83441 10.5 2.02855 10.5Z"
+                                fill="#141517"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M4.41544 32H27.5828C29.4567 32 31.2837 30.9702 31.7031 29.1401C31.9932 27.8742 31.9306 26.6667 30.6358 26.6667H1.36238C0.0676059 26.6667 0.00501519 27.8742 0.295144 29.1401C0.714576 30.9702 2.54154 32 4.41544 32ZM27.5828 30.5H4.41544C2.98481 30.5 1.96681 29.7325 1.7541 28.8044C1.6971 28.5556 1.66431 28.3412 1.65372 28.1667H30.3445C30.3339 28.3412 30.3011 28.5556 30.2441 28.8044C30.0314 29.7325 29.0134 30.5 27.5828 30.5Z"
+                                fill="#141517" 
+                            />
+                            <path
+                                d="M11.9906 16.2863C9.82406 15.6942 7.53889 15.6942 5.3724 16.2863L1.71321 17.2863C1.00423 17.48 0.272739 17.0612 0.0793804 16.3507C-0.113978 15.6403 0.304017 14.9073 1.013 14.7136L4.67218 13.7136C7.29711 12.9962 10.0658 12.9962 12.6908 13.7136C14.8573 14.3056 17.1424 14.3056 19.3089 13.7136C21.9338 12.9962 24.7026 12.9962 27.3275 13.7136L30.9867 14.7136C31.6957 14.9073 32.1137 15.6403 31.9203 16.3507C31.7269 17.0612 30.9955 17.48 30.2865 17.2863L26.6273 16.2863C24.4608 15.6942 22.1756 15.6942 20.0091 16.2863C17.3842 17.0036 14.6155 17.0036 11.9906 16.2863Z"
+                                fill="#141517"></path>
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M31.9669 22.0001C31.9669 20.1591 30.4775 18.6667 28.6403 18.6667H3.35869C1.5215 18.6667 0.0321609 20.1591 0.0321609 22.0001C0.0321609 23.841 1.5215 25.3334 3.35869 25.3334H28.6403C30.4775 25.3334 31.9669 23.841 31.9669 22.0001ZM25.0181 20.0001L20.1686 23.9759C20.1586 23.9842 20.1485 23.9922 20.1383 24.0001C20.0862 24.0404 20.0318 24.0763 19.9756 24.1078C19.5166 24.3654 18.94 24.3294 18.5138 24.0001C18.5036 23.9922 18.4935 23.9842 18.4834 23.9759L13.634 20.0001H25.0181Z"
+                                fill="#141517"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_444_10604">
+                                <rect width="32" height="32" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </nav>
+            <button class="hidden"></button>
+        </div>
+        <div class="relative mx-auto w-full xl:max-w-screen-2xl">
+            <div class="my-4 flex flex-wrap items-start justify-between sm:my-16 sm:flex-nowrap">
+                <div class="mt-6 w-full p-6 md:pr-0 sm:mx-0 sm:mb-24 sm:mt-12 sm:max-w-[80%] lg:mx-12 lg:mr-0">
+                    <h1 class="font-ohno text-center text-5xl sm:text-left sm:text-6xl lg:text-[80px]">
+                        A performant, affordable 
+                        <br class="hidden md:block" /> 
+                        Artificial intelligence? Yes, please!
+                    </h1>
+                    <div class="mb-12 mt-6 flex flex-col items-center gap-4 sm:mb-0 sm:items-start md:mt-10 md:flex-row md:gap-8 lg:gap-12">
+                        <div class="flex-1 text-center text-lg text-green-800 sm:text-left sm:text-xl md:flex-none md:text-2xl lg:text-3xl">
+                            We're on a mission to
+                            <br class="hidden md:block" /> 
+                            make artificial intelligence a pleasure.
+                        </div>	
+                    </div>
+                </div>
+                <img
+                    src="https://www.summer.io/images/landing/header-assets.png"
+                    class="mt-[10%] hidden w-full max-w-[300px] sm:block lg:max-w-[420px] lg:mt-0 xl:max-w-[480px]"
+                    alt="Mockups of different data views within Summer"
+                />
+            </div>
+            <img
+                src="https://www.summer.io/images/landing/sunni-lemonade.png"
+                class="absolute -bottom-24 right-12 z-[5] w-36 sm:right-32 sm:w-48 md:right-64 2xl:right-[20%]"
+                alt="Sunni, the Summer mascot, sipping lemonade"
+            />
+            <img
+                src="https://www.summer.io/images/landing/landing-drips.svg"
+                class="absolute left-8 top-[100%] z-[1] mt-6 w-64 sm:left-24 lg:w-[400px] xl:w-[600px]"
+                alt="Decorative drips"
+            />
+        </div>
+        <div class="drip rounded-none pointer-events-none absolute left-0 right-0 top-full bottom-0 z-20 -m-[2px] w-full drip2">
+        </div>
+    </section>
+    <section class="p-6 bg-background [&>*]:bg-background rounded-none relative flex flex-col items-center justify-center gap-8 pb-12 text-center pt-36 lg:pt-52">
+        <div class="font-ohno mx-6 !bg-transparent text-5xl md:mx-24 md:text-7xl z-10 relative kite">
+            <div>From zero to hero with Lohen.</div>
+        </div>
+        <div class="relative max-w-[680px] !bg-transparent text-2xl">
+            <div class="text-foreground-subtle text-[18px] sm:text-[24px]">
+                <p class="max-w-[580px]">
+                    Lohen moves foward with new safe AI with the power of the blockchain.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="mx-auto grid max-w-screen-2xl gap-4 p-8 pt-0 sm:gap-x-8 sm:gap-y-12 md:grid-cols-2 2xl:p-0">
+        <div class="flex-col border border-pink-800 text-pink-900 rounded-3xl pink card my-8 sm:my-12 flex items-start justify-center p-8 sm:p-10 sm:mx-8 -rotate-2">
+            <div class="color-foreground mb-2 flex font-medium items-center gap-2.5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
+                <img src="https://www.summer.io/images/landing/icon-ingest.png" alt="Icon for connectors" class="w-12 sm:w-16"/>
+                Text Summarizer
+            </div>
+            <p class="text-md sm:text-xl lg:text-2xl">
+                Importing your data into Summer will be smooth sailing,
+                thanks to our built in ETL tooling. We have dozens of
+                connectors to choose from, with more on the way.
+            </p>
+        </div>
+        <img src="https://www.summer.io/images/landing/featured-image1.png" alt="Series of logos and showcasing" class="m-auto" />
+        
+        <div class="flex-col border border-blue-800 text-blue-900 rounded-3xl blue card my-8 sm:my-12 flex items-start justify-center p-8 sm:p-10 sm:mx-8 rotate-2">
+            <div class="color-foreground mb-2 flex font-medium items-center gap-2.5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
+                <img src="https://www.summer.io/images/landing/icon-warehouse.png" alt="Icon for queries" class="w-12 sm:w-16" />
+                Powerful chatbot
+            </div>
+            <p class="text-md sm:text-xl lg:text-2xl">
+                We've designed and built a data warehouse from the ground up
+                to deliver the best performance and pricing out there.
+            </p>
+        </div>
+        <img src="https://www.summer.io/images/landing/featured-image2.png" alt="An example SQL" class="m-auto" />
+
+        <div class="flex-col border border-orange-800 text-orange-900 rounded-3xl orange card my-8 sm:my-12 flex items-start justify-center p-8 sm:p-10 sm:mx-8 -rotate-2">
+            <div class="color-foreground mb-2 flex font-medium items-center gap-2.5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
+                <img src="https://www.summer.io/images/landing/icon-analytics.png" alt="Icon for dashboards" class="w-12 sm:w-16" />
+                Bring Data to Life
+            </div>
+            <p class="text-md sm:text-xl lg:text-2xl">
+                Powerful visualization and dashboarding tools are included
+                to turn your data into insights. As gorgeous as they are
+                smart, it's the complete package.
+            </p>
+        </div>
+        <img src="https://www.summer.io/images/landing/featured-image3.png" alt="A dashboard showcasing data visualizations" class="m-auto" />
+    </div>
+    
+    <section class="mt-10 mb-52 bg-background [&>*]:bg-background rounded-none relative flex flex-col items-center justify-center gap-8 text-center">
+        <div class="font-ohno !bg-transparent text-xl md:mx-24 md:text-4xl z-10 relative kite">
+            <div>Big and special thanks to our supporters.</div>
+        </div>
+        <div class="relative !bg-transparent text-2xl mx-auto max-w-5xl">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex flex-1 gap-3 flex-col md:flex-row">
+                    <Image src={eclipseLogo} alt="Eclipse logo" class="h-20" />
+                    <Image src={jetbrainsLogo} alt="Jetbrains logo" class="h-20" />
+                    <Image src={pifLogo} alt="PIF logo" class="h-20" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative mt-28"></div>
+
+    <section class="flex flex-col p-6 relative bg-blue-400 rounded-t-[30px] md:rounded-t-[80px] -mt-16 items-center py-12">
+        <footer class="flex w-full max-w-screen-2xl flex-col px-4 sm:px-10 md:px-20 2xl:px-0">
+            <div class="grid gap-10 pb-10 sm:grid-cols-2 sm:py-10">
+                <div class="flex flex-col justify-end gap-4 md:text-lg">
+                    <a href="/">Home</a>
+                    <div class="flex flex-col gap-4">
+                        <a href="/pricing">Pricing</a>
+                        <a href="/jobs">Careers</a>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center text-center">
+                    <Image src={lohenTextLogo} alt="Lohen logo" class="w-2xl" />
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-blue-500 px-8 py-4">
+                <div class="flex flex-1 gap-3">
+                    <a href="">
+                        <Icon name="mdi:email" width={25} height={25} />
+                    </a>
+                </div>
+                <p class="text-end leading-tight text-blue-800">© 2025 Lohen AI Co.</p>
+            </div>
+        </footer>
+    </section>
 </Layout>
