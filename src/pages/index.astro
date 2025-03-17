@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import lohenTextLogo from '../assets/lohen_text.svg';
-import lohenLogo from '../assets/lohen_cross.svg';
+import lohenLogo from '../assets/lohen.svg';
 
 import { Image } from "astro:assets";
 import { Icon } from 'astro-icon/components';
@@ -17,7 +16,7 @@ import pifLogo from '../assets/supporters/PublicInvestmentFund.svg';
             <nav class="relative z-30 mx-auto flex w-full max-w-screen-2xl flex-wrap items-center justify-between p-6 bg-green-400">
                 <a class="text-black" href="/">
                     <!--<img class="h-6 md:h-8" src="https://www.summer.io/_app/immutable/assets/logo.Df-S5yqT.svg" /> -->
-                    <Image src={lohenTextLogo} alt="Lohen text logo" class="h-6 md:h-8" />
+                    <Image src={lohenLogo} alt="Lohen text logo" class="h-6 md:h-8" />
                 </a>
                 <div class="hidden gap-8 sm:flex">
                     <a href="/">Pricing</a>
@@ -211,12 +210,12 @@ import pifLogo from '../assets/supporters/PublicInvestmentFund.svg';
                     </div>
                 </div>
                 <div class="flex flex-col justify-center text-center">
-                    <Image src={lohenTextLogo} alt="Lohen logo" class="w-2xl" />
+                    <Image src={lohenLogo} alt="Lohen logo" class="w-2xl" />
                 </div>
             </div>
             <div class="flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-blue-500 px-8 py-4">
                 <div class="flex flex-1 gap-3">
-                    <a href="">
+                    <a href="#">
                         <Icon name="mdi:email" width={25} height={25} />
                     </a>
                 </div>
